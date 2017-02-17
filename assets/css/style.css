@@ -18,7 +18,7 @@ html,body {
 	background-color: tan;
 }
 
-#game-num, #win-loss {
+#game-num, #win-loss, #result {
 
 	border: solid black 2px;
 	padding: 20px;
@@ -28,7 +28,7 @@ html,body {
 
 }
 
-#game-num {
+#game-num, #result {
 	font-size: 30px;
 }
 
@@ -46,4 +46,8 @@ html,body {
 
 #list {
 	list-style-type: circle;
+}
+
+#result {
+	text-align: center;
 }

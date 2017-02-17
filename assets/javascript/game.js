@@ -13,8 +13,8 @@ function init() {
 	console.log(gameNumber);
 	crystalValueArray = [];
 	clickedCrystalValue = 0;
-	wins = 0;
-	losses = 0;
+	wins = sessionStorage.getItem('wins') || 0;
+	losses = sessionStorage.getItem('losses') || 0;
 
 	$("#number").html(gameNumber)
 	$("#wins").html("Wins: " + wins);
@@ -41,15 +41,18 @@ function game() {
 	 	$("#score").html("Your score is: " + playerScore);
 
 		if (playerScore == gameNumber) {
-			console.log("YOU WIN");
+			$("#result").html("You WIN!");
 			wins++;
+			sessionStorage.setItem('wins', wins);
 			$("#wins").html("Wins: " + wins);
 			resetGame();
 		}
 
 		if (playerScore > gameNumber) {
+			$("#result").html("You LOSE!");
 			console.log("YOU LOSE");
 			losses++;
+			sessionStorage.setItem('losses', losses);
 			$("#losses").html("Losses: " + losses);
 			resetGame();
 		}
@@ -84,6 +87,8 @@ function createCrystals() {
 }
 
 function resetGame() {
+	$("#crystals").html("");
+	// $("#result").html("");
 	init();
 }
 
