@@ -1,0 +1,49 @@
+html,body {
+	background: url("../images/bg-img.png");
+}
+
+#instructions {
+
+	border: solid black 2px;
+	padding: 30px;
+	background-color: tan;
+
+}
+
+#game-title {
+	text-align: center;
+	margin-bottom: 20px;
+    margin-top: auto;
+	padding: 20px;
+	background-color: tan;
+}
+
+#game-num, #win-loss {
+
+	border: solid black 2px;
+	padding: 20px;
+	background-color: tan;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+#game-num {
+	font-size: 30px;
+}
+
+.crystal-image {
+	margin: 5px;
+	border: solid black 2px;
+}
+
+#score {
+	background-color: tan;
+	margin-top: 20px;
+	border: solid black 2px;
+	padding: 20px;
+}
+
+#list {
+	list-style-type: circle;
+}
