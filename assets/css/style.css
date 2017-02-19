@@ -77,13 +77,23 @@ html,body {
 }
 
 /*overwrite bootstrap button color*/
-.btn-primary {
-    background-image: -webkit-linear-gradient(top,#8c1f1f 0,#8c1f1f 100%);
-    border-color: #5e6aa8;
+#play-button.btn-primary {
+    background-image: -webkit-linear-gradient(top,#3a8a20 0,#3dc511 100%);
+    border-color: #3dc511;
+    width: 150px;
+}
+
+#reset-button.btn-primary {
+    background-image: -webkit-linear-gradient(top,#5d0101 0,#8c1f1f 100%);
+    border-color: #8c1f1f;
     width: 150px;
 }
 
 /*overwrite bootstrap button hover color*/
-.btn-primary:focus, .btn-primary:hover {
+#reset-button.btn-primary:focus, #reset-button.btn-primary:hover {
 	background-color: #8c1f1f;
+}
+
+#play-button.btn-primary:focus, #play-button.btn-primary:hover {
+	background-color: #3dc511;
 }

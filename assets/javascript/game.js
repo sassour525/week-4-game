@@ -101,8 +101,16 @@ function resetGame() {
 	init();
 }
 
+function clearGame() {
+	$("#crystals").html("");
+	$("#result").html("");
+	sessionStorage.clear();
+	init();
+}
+
 //on window load variables are initialized
 window.onload = function() {
 	init();
-	document.getElementById("reset-button").onclick = resetGame; //When reset button is clicked call resetGame function
+	document.getElementById("play-button").onclick = resetGame;
+	document.getElementById("reset-button").onclick = clearGame; //When reset button is clicked call resetGame function
 }
