@@ -1,53 +1,88 @@
+/*set background image*/
 html,body {
-	background: url("../images/bg-img.png");
+	background: url("../images/bg-img.jpg");
 }
 
+/*game instructions styling*/
 #instructions {
 
-	border: solid black 2px;
+	border: dashed black 2px;
 	padding: 30px;
-	background-color: tan;
-
+	background-color: #5bc0de;
 }
 
+/*style for top title*/
 #game-title {
 	text-align: center;
 	margin-bottom: 20px;
     margin-top: auto;
 	padding: 20px;
-	background-color: tan;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 50px;
+	border-bottom: solid black 5px;
 }
 
+/*match style and font for alike divs*/
 #game-num, #win-loss, #result {
-
 	border: solid black 2px;
 	padding: 20px;
-	background-color: tan;
 	margin-top: 20px;
 	margin-bottom: 20px;
-
+	font-family: 'Kaushan Script', cursive;
 }
 
-#game-num, #result {
-	font-size: 30px;
+/*style font size of win / loss / score*/
+#wins, #losses, #score {
+	font-size: 18px;
 }
 
+/*style for crystal images*/
 .crystal-image {
 	margin: 5px;
 	border: solid black 2px;
+	cursor: pointer;
 }
 
+/*style player score*/
 #score {
-	background-color: tan;
+	background-color: #5bc0de;
 	margin-top: 20px;
 	border: solid black 2px;
 	padding: 20px;
+	font-family: 'Kaushan Script', cursive;
 }
 
+/*style game rules list */
 #list {
 	list-style-type: circle;
 }
 
+/*style game result win or loss section*/
 #result {
 	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 30px;
+}
+
+/*set background image for all main page elements*/
+#instructions, #game-title, .crystal-image, #game-num, #win-loss, #score, #result {
+	background: url("../images/bg-img.png");
+}
+
+
+/*reset button style*/
+.bottom-button {
+	text-align: center;
+}
+
+/*overwrite bootstrap button color*/
+.btn-primary {
+    background-image: -webkit-linear-gradient(top,#8c1f1f 0,#8c1f1f 100%);
+    border-color: #5e6aa8;
+    width: 150px;
+}
+
+/*overwrite bootstrap button hover color*/
+.btn-primary:focus, .btn-primary:hover {
+	background-color: #8c1f1f;
 }

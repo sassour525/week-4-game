@@ -3,25 +3,27 @@
 <head>
 	<title>Crystal Collector</title>
 <!-- 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
 
 	<div>
-		<h1 id="game-title">Crystal Collector!</h1>
+		<h1 id="game-title">Crystal Collector!</h1> <!-- displays game title -->
 	</div>
 
 	<div class="container">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
 			<div class="row">
-				<div id="instructions">
+				<div id="instructions"> <!-- holds game instructions -->
 					<ul id="list">
 						<li>You will get a random number at the start of the game.</li>
 						<br>
@@ -38,23 +40,26 @@
 			<div class="row">
 				<div id="num-win-loss">
 					<div class="col-md-3" id="game-num">
-						<h2 id="number"></h2>
+						<h2 id="number"></h2> <!-- current number player is trying to match to win -->
 					</div>
 					<div class="col-md-1"></div>
-					<div class="col-md-4" id="result"></div>
+					<div class="col-md-4" id="result"></div> <!-- displays game result, win or lose -->
 					<div class="col-md-1"></div>
 					<div class="col-md-3" id="win-loss">
-						<h5 id="wins"></h5>
-						<h5 id="losses"></h5>
+						<h5 id="wins"></h5> <!-- displays number of games won -->
+						<h5 id="losses"></h5> <!-- displays number of games loss -->
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div id="crystals"></div>
+				<div id="crystals"></div> <!-- holds the crystals -->
 			</div>
 			<div class="row">
 				<div id="player-score">
-					<h4 id="score"></h4>
+					<h4 id="score"></h4> <!-- holds players current score -->
+					<div class="row bottom-button">
+						<input class="btn btn-primary" id="reset-button" type="reset" value="Reset">
+					</div>
 				</div>
 			</div>
 		</div>
