@@ -82,7 +82,7 @@ html,body {
     border-color: #3dc511;
     width: 150px;
 }
-
+/*overwrite bootstrap button color*/
 #reset-button.btn-primary {
     background-image: -webkit-linear-gradient(top,#5d0101 0,#8c1f1f 100%);
     border-color: #8c1f1f;
@@ -94,6 +94,7 @@ html,body {
 	background-color: #8c1f1f;
 }
 
+/*overwrite bootstrap button hover color*/
 #play-button.btn-primary:focus, #play-button.btn-primary:hover {
 	background-color: #3dc511;
 }

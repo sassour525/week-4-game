@@ -16,12 +16,15 @@ function init() {
 	wins = sessionStorage.getItem('wins') || 0;
 	losses = sessionStorage.getItem('losses') || 0;
 
-	$("#number").html(gameNumber) //display current number player is trying to match
+	$("#number").html(gameNumber); //display current number player is trying to match
 	$("#wins").html("Wins: " + wins); //display games won
 	$("#losses").html("Losses: " + losses); //display games loss
 	$("#score").html("Your score is: " + playerScore); //display players current score
 
-	generateCrystalValue(); //generate crystal values when page loads
+	for (var j = 0; j < 4; j++) {
+		generateCrystalValue(); //generate crystal values when page loads
+	}
+
 	createCrystals(); //create crystals on page load
 	game(); //call game function to start calcualting player score once crystals are clicked
 }
@@ -65,24 +68,25 @@ function game() {
 
 function generateCrystalValue() {
 // generates a number value assigned to each clickable crystal
+	crystalValue = randomNumGen();
 
-	for (var j = 0; j < 4; j++) {
-		//loop to generate the value for each crystal on the screen
-		crystalValue = Math.floor(Math.random() * (12 - 1) + 1);
-		if (crystalValueArray.indexOf(crystalValue) <= -1) {
-			//if the value is not already in the array add it to the array
-			crystalValueArray.push(crystalValue);
-		} else {
-			//additioanl random number generator to try and keep from duplicates being assigned
-			crystalValueArray.push(Math.floor(Math.random() * (12 - 1) + 1));
-		}
+	if (crystalValueArray.indexOf(crystalValue) <= -1) {
+		//if the value is not already in the array add it to the array
+		crystalValueArray.push(crystalValue);
+	} else {
+		//recursively call the function again to generate a new random number
+		generateCrystalValue();
 	}
+}
+
+function randomNumGen() {
+	return Math.floor(Math.random() * (12 - 1) + 1);
 }
 
 function createCrystals() {
 // creates 4 crystals on the screen to click during the game
 
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < crystalValueArray.length; i++) {
 		//create crystal images displayed on the screen
 		imageCrystal = $("<img>");
 		imageCrystal.addClass("crystal-image");
