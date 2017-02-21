@@ -99,3 +99,7 @@ html,body {
 #play-button.btn-primary:focus, #play-button.btn-primary:hover {
 	background-color: #3dc511;
 }
+
+h2 {
+	font-size: 30px;
+}
